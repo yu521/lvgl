@@ -31,7 +31,7 @@ static void draw_event_cb(lv_event_t * e)
         }
 
         /*Make every 2nd row grayish*/
-        if((row != 0 && row % 2) == 0) {
+        if((row != 0) && (row % 2 == 0)) {
             if(draw_task->type == LV_DRAW_TASK_TYPE_FILL) {
                 lv_draw_rect_dsc_t * rect_draw_dsc = draw_task->draw_dsc;
                 rect_draw_dsc->bg_color = lv_color_mix(lv_palette_main(LV_PALETTE_GREY), rect_draw_dsc->bg_color, LV_OPA_10);
